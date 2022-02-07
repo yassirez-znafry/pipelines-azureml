@@ -23,7 +23,7 @@ jobs:
       with:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
     - name: install azmlcli
-      run: az extension add -n azure-cli-ml
+      run: az extension add -s https://azurecliext.blob.core.windows.net/release/azure_cli_ml-1.15.0-py3-none-any.whl -y
     - name: attach to workspace
       working-directory: ${{env.ml-path}}
       run: az ml folder attach -w myworkspace -g myresourcegroup
