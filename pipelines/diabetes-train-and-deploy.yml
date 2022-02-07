@@ -12,7 +12,7 @@ trigger:
 - master
 
 pool:
-  vmImage: 'ubuntu-16.04'
+  vmImage: 'ubuntu-latest'
 
 steps:
 - task: AzureCLI@2
